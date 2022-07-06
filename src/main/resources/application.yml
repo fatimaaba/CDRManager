@@ -1,0 +1,24 @@
+spring.kafka:
+  bootstrap-servers: 127.0.0.1:9092
+  #  bootstrap-servers: 10.115.69.20:9092
+  topic:
+    name: DeliverdList
+
+
+  consumer:
+    group-id: newGroup6
+    max-poll-records: 90
+    auto-offset-reset: earliest
+  listener:
+    type: BATCH
+    ack-mode: MANUAL
+    concurrency: 1
+
+
+cdr.statusCode: 1
+cdr.CategoryName: SMS
+cdr.EventType: NORMAL
+cdr.ActionType: CHARGE
+cdr.ServiceProviderName: b2cadmin
+cdr.Content_ItemName: b2cadmin
+
